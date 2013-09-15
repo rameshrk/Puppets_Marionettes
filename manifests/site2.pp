@@ -1,4 +1,5 @@
-import 'nodesusercreate.pp'
+import 'nodesuserremove.pp'
+#import 'nodesusercreate.pp'
 #import 'nodesmodulesnginx.pp'
 #import 'nodeslatestnginx.pp'
 #import 'nodesremovenginx.pp'

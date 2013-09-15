@@ -1,0 +1,4 @@
+user { 'art':
+ensure => absent,
+}
+
