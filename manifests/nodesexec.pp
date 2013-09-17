@@ -1,6 +1,6 @@
 node 'demo' {
 exec { 'Run my arbitrary command':
-command => '/bin/echo I ran this command on `/bin/date` >/tmp/command.output.tx',
+command => '/bin/echo I ran this command on `/bin/date` >/tmp/command.output1.txt',
 }
 exec { 'Download public key for John':
 cwd => '/tmp',
@@ -29,9 +29,12 @@ require => Exec['command-2'],
 }
 
 exec { 'Run my arbitrary command after searching':
-command => 'echo Finding echo and ran this command on `date` >/tmp/command.output.txt',
+command => 'echo Finding echo and ran this command on `date` >/tmp/command.output2.txt',
 path => ['/bin', '/usr/bin'],
 require => Exec['Run my arbitrary command']
+}
+exec { 'Run my arbitrary command after searching with no path':
+command => 'echo I ran this command on `date` >/tmp/command.output3.txt',
 }
 
 
