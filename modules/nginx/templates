@@ -1,0 +1,6 @@
+server {
+listen 80;
+root /var/www/<%= @site_name %>;
+server_name <%= @site_domain %>;
+}
+
