@@ -7,9 +7,9 @@ ensure => running,
 enable => true,
 require => Package['nginx'],
 }
-file { '/etc/nginx/conf.d/default.conf':
-source => 'puppet:///modules/nginx/cat-pictures.conf',
-notify => Service['nginx'],
+file { '/etc/nginx/sites-enabled/default':
+ensure => absent,
 }
+
 }
 
